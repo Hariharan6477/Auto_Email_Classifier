@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+
+  "name": "Barclays Mail Classifier",
+  "description": "This extension is used to classify emails",
+  "version": "1.0",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/barclays_logo.png"
+  },
+
+  "icons": {
+    "48": "assets/barclays_logo.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": ["js/jquery.min.js", "js/popup.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+}
